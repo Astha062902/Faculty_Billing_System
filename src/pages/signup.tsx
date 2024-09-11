@@ -7,15 +7,41 @@ import { generatePDF } from "./pdf";
 
 
 const SignUp: React.FC = () => {
-  const [reg_value, setreg_value]=useState({name:'',address:'',email:'',designation:'',PAN:'',telephone:'',mobile:'',bank_name:'',branch:'',acc_no:'',IFSC:'',password:''});
+  const [reg_value, setreg_value]=useState({name:'',address:'',email:'',designation:'',PAN:'',telephone:'',mobile:'',bank_name:'',branch:'',acc_no:'',IFSC:'',password:'',amount:''});
   const handleInput=(e:any) => {
     setreg_value({...reg_value,[e.target.name]:e.target.value});
   }
-  const handleSubmit=async(e:MouseEvent<HTMLButtonElement>)=>{
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const regData= {name:reg_value.name,address:reg_value.address, email:reg_value.email};
-    const res=await axios.post('http://localhost/php/signup.php',regData);
-    console.log("Submitting data:", regData); // Log data being sent
+  
+    // Prepare the registration data with all the fields
+    const regData = {
+      name: reg_value.name,
+      address: reg_value.address,
+      email: reg_value.email,
+      designation: reg_value.designation,
+      PAN: reg_value.PAN,
+      telephone: reg_value.telephone,
+      mobile: reg_value.mobile,
+      bank_name: reg_value.bank_name,
+      branch: reg_value.branch,
+      acc_no: reg_value.acc_no,
+      IFSC: reg_value.IFSC,
+      password: reg_value.password,
+      amount: 0,
+    };
+  
+    try {
+      // Send the registration data to the backend
+      const response = await axios.post('http://localhost/php/signup.php', regData);
+  
+      // Log the response data from the server
+      console.log("Submitted data:", regData);
+      console.log("Server response:", response.data);
+    } catch (error) {
+      // Handle errors
+      console.error("There was an error submitting the data:", error);
+    }
   }
   
   return (
