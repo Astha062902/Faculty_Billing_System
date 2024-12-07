@@ -6,7 +6,7 @@ In universities, the payment process for faculty members remains largely manual,
 ## 🚀 Brief Overview of Our Solution
 Our solution aims to automate the billing process workflow, significantly increasing the efficiency of university operations. By eliminating the need to sift through paper forms, mail, email, scan, or process them manually, our automated system allows you to “set and forget” certain steps. Key features of our solution include:
 
-#### Comprehensive Automation of Faculty Compensation
+#### Comprehensive Automation of Faculty Compensation based on
 - Evaluation of Answer Sheets
 - Creation of Question Papers
 - Teaching Hours Logged
@@ -20,6 +20,7 @@ Efficiently manages the entire process from expense reimbursement to proper comp
 - **Database Management** : All faculty data is stored in a main database using MySQL. This includes data related to question papers, evaluation, and teaching hours, which are used to fetch details in real-time based on the course and subject chosen by the faculty.
 - **User Authentication** : Secure access and operations are ensured through the use of session tokens and CORS headers.
 - **Real-Time Updates** : Details on the homepage can be edited in real-time, with any changes directly reflected in the database. This guarantees that information is always current.
+- **Automated PDF Generation for Bills** : All faculty expenses, including travel, evaluations, and teaching, are compiled and presented as detailed PDF bills. This provides a clear and professional record for faculty members and administration.
 - **Local Web Server Deployment** : The project is deployed using a local web server environment called XAMPP, facilitating easy setup and management.
 
 ## 💻 Technology Stack 
@@ -39,6 +40,9 @@ Experience our automated billing system in action through a series of videos. Th
   [login.webm](https://github.com/user-attachments/assets/5acca6f9-14f8-47e4-b68c-83390114d5ee)
 
   - Sign Up: New users can create an account by providing necessary details.
+
+  [signup.mp4](https://github.com/user-attachments/assets/4b2c85e9-b6b4-4c31-b663-016fe889a719)
+
 
 </details>
 
@@ -95,6 +99,9 @@ Experience our automated billing system in action through a series of videos. Th
 
 ## 🎬 Demonstration
 Watch a demo video of our Faculty Billing System web app to see these features in action.
+
+[demo.mp4](https://github.com/user-attachments/assets/e44cb66b-c9cf-40d6-88af-1aaa6ce9b0dc)
+
 
 ## 🚀 Future Work
 Creating an admin side in the web app with the following features:
